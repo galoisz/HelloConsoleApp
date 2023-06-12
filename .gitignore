@@ -1,0 +1,20 @@
+# .NET
+# Binaries
+*.exe
+*.dll
+*.pdb
+*.dll.config
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+publish/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+/[Oo]bj/
+/[Bb]in/

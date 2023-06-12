@@ -1,0 +1,29 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-console-deployment
+  labels:
+    app: hello-console
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-console
+  template:
+    metadata:
+      labels:
+        app: hello-console
+    spec:
+      containers:
+        - name: hello-console
+          image:  galzfira/hello-console-image
+          volumeMounts:
+            - name: appsettings-volume
+              mountPath: /app/appsettings.json
+              subPath: appsettings.json
+          ports:
+            - containerPort: 80
+      volumes:
+        - name: appsettings-volume
+          configMap:
+            name: appsettings-config

@@ -1,0 +1,20 @@
+﻿apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: appsettings-config
+data:
+  appsettings.json: |
+    {
+      "person": {
+        "FirstName": "Roei",
+        "LastName": "Zfira"
+      },
+      "ConnectionStrings": {
+        "Database": "your_connection_string"
+      },
+      "Logging": {
+        "LogLevel": {
+          "Default": "Information"
+        }
+      }
+    }
